@@ -1,14 +1,12 @@
 "use strict";
 
-function PrintAfter(str) {
-  const print = function () {
-    console.log("Elon Musk");
-    return str;
-  };
-
-  return print;
+function PrintAfter(cb) {
+  console.log("hello world!");
+  cb();
 }
 
-let hello = PrintAfter("Hello Word");
-console.log(hello());
-// console.log(PrintAfter("asdasdasd"));
+const print = function () {
+  console.log("Elon Musk");
+};
+
+console.log(PrintAfter(print));
